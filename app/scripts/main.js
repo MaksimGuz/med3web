@@ -173,13 +173,13 @@ function onPageLoad() {
     const arr = strSearch.match(strReg);
     fileNameOnLoad = arr[1];
     // console.log(`fileNameOnLoad = ${fileNameOnLoad}`);
-    // check url valid
-    const reg = /^((ftp|http|https):\/\/)?www\.([\S]+)\.([A-z]{2,})\/[\S]+/;
-    const isValidArr = fileNameOnLoad.match(reg);
-    if (isValidArr === null) {
-      console.log(`Not valid URL = ${isValidArr}, f = ${fileNameOnLoad}`);
-      return;
-    }
+    // not check url valid
+    //const reg = /^((ftp|http|https):\/\/)?www\.([\S]+)\.([A-z]{2,})\/[\S]+/;
+    //const isValidArr = fileNameOnLoad.match(reg);
+    //if (isValidArr === null) {
+    //  console.log(`Not valid URL = ${isValidArr}, f = ${fileNameOnLoad}`);
+    //  return;
+    //}
   }
   // detect file type by file name extenstion
   const fileTypeOnLoad = _getLoadFileType(fileNameOnLoad);
